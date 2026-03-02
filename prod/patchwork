@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+MF_PATH=$(realpath manifestTemplate.txt)
+pushd dist || exit 1
+xargs sha256sum < "$MF_PATH" > manifest.txt

@@ -1,0 +1,10 @@
+./index.html
+./sw.js
+./importmap.js
+./src/index.js
+./vendor/ffmpeg-ffmpeg/worker.js
+./vendor/ffmpeg-ffmpeg/const.js
+./vendor/ffmpeg-ffmpeg/errors.js
+./vendor/ffmpeg-core/ffmpeg-core.wasm
+./vendor/ffmpeg-core/ffmpeg-core.js
+./vendor/es-module-shims/es-module-shims.js
