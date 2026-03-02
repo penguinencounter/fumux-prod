@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+sed 's/\.\/worker.js/\.\.\/vendor\/ffmpeg-ffmpeg\/worker.js/' dist/src/index.js > dist/src/index2.js
+mv -f dist/src/index2.js dist/src/index.js
+
+MF_PATH=$(realpath manifestTemplate.txt)
+pushd dist || exit 1
+xargs sha256sum < "$MF_PATH" > manifest.txt
