@@ -1,0 +1,21 @@
+{
+  "name": "fumux",
+  "version": "dev",
+  "description": "look i just want to run ffmpeg in a browser why are packages like this",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "build": "./vendor-it; jspm install -C production -p jspm.io; jspm build -C production -p jspm.io; ./patchwork",
+    "dev": "jspm serve -p nodemodules"
+  },
+  "devDependencies": {
+    "@ffmpeg/core": "^0.12.10",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "es-module-shims": "^2.8.0",
+    "jspm": "^4.4.0",
+    "typescript": "^5.9.3"
+  }
+}

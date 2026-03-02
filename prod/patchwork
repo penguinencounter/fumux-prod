@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sed 's/\.\/worker.js/\.\.\/vendor\/ffmpeg-ffmpeg\/worker.js/' dist/src/index.js > dist/src/index2.js
+mv -f dist/src/index2.js dist/src/index.js
