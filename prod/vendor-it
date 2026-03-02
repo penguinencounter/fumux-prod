@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo "vendoring it up"
+rm -r vendor
+pnpm add -D @ffmpeg/core es-module-shims
+mkdir -p vendor
+cp -rfT 'node_modules/@ffmpeg/core/dist/esm/' 'vendor/ffmpeg-core'
+cp -rfT 'node_modules/@ffmpeg/ffmpeg/dist/esm/' 'vendor/ffmpeg-ffmpeg'
+cp -rfT 'node_modules/es-module-shims/dist/' 'vendor/es-module-shims'
+find vendor -type f -name '*ts' -delete
